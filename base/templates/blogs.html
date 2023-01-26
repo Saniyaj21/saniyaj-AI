@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+
+{% block body %}
+  <style>
+    body {
+      background-color: #353740;
+    }
+    .black-box {
+      color: white;
+      background-color: #6e6e80;
+    }
+    .btn {
+      margin: auto;
+      display: block;
+    }
+    .text-color {
+      color: white;
+    }
+  </style>
+  <form action="" method="POST" class="my-4">
+    {% csrf_token %}
+    <div class="mb-3">
+      <label for="exampleInputEmail1" class="form-label text-color">Ask Questions</label>
+      <input type="text" placeholder="Ask me anything.." class="form-control" name="question" id="name" aria-describedby="emailHelp" />
+    </div>
+
+    <button type="submit" class="btn btn-outline-light my-5">Submit</button>
+  </form>
+
+  <div class="black-box px-4 py-3">
+    Q. {{ ask }}<br />Ans. {{ answer }}
+  </div>
+{% endblock %}

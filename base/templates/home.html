@@ -1,0 +1,17 @@
+{% extends 'main.html' %}
+
+{% block body %}
+
+<style>
+  a{
+    text-decoration: none;
+  }
+  .btn{
+    margin: auto;
+    display: block;
+  }
+</style>
+
+
+  <a href="{% url 'blogs' %}"><button class="btn btn-outline-success my-5">Ask questions to AI</button></a>
+{% endblock %}
